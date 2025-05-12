@@ -1,0 +1,78 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f6f1;
+}
+h1, h2, h3, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+.navbar {
+  background-color: #5e3b1d;
+}
+.navbar-brand, .nav-link {
+  color: #f8f1e7 !important;
+}
+.nav-link {
+  position: relative;
+  color: #f8f1e7 !important;
+  padding: 6px 12px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #d9bfa3;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.hero {
+  background: url('imgs/Manzar.jpg') no-repeat center center;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+}
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-body {
+  background-color: #fffaf3;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(92, 64, 51, 0.2);
+  z-index: 2;
+}
+#activities .card:hover {
+  transform: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Reverts to the original shadow */
+  z-index: 1; /* Ensures no hover z-index change */
+}
+#amenities {
+  background-color: #f4ede3;
+}
+#contact {
+  background-color: #fff8f1;
+}
+footer {
+  background-color: #3c2711;
+}
+.material-icons {
+  vertical-align: middle;
+  color: #5e3b1d;
+}
