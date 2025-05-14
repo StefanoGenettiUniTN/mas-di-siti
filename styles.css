@@ -58,11 +58,6 @@ h1, h2, h3, .navbar-brand {
   box-shadow: 0 10px 25px rgba(92, 64, 51, 0.2);
   z-index: 2;
 }
-#activities .card:hover {
-  transform: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Reverts to the original shadow */
-  z-index: 1; /* Ensures no hover z-index change */
-}
 #amenities {
   background-color: #f4ede3;
 }
@@ -75,4 +70,10 @@ footer {
 .material-icons {
   vertical-align: middle;
   color: #5e3b1d;
+}
+.elegant-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 2rem 0;
 }
