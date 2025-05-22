@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f9f6f1;
+  overflow-x: hidden;
 }
 h1, h2, h3, .navbar-brand {
   font-family: 'Playfair Display', serif;
@@ -107,4 +108,53 @@ footer {
 }
 .card:hover .dettagli-link::after {
   transform: scaleX(1);
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background: rgba(245, 235, 220, 0.95); /* light brown/white */
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: 80%; /* Wider */
+  max-width: 900px; /* Max width to avoid being too large on wide screens */
+  text-align: center;
+  opacity: 0;
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+}
+
+.cookie-banner a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.cookie-banner .close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+.cookie-banner .close-button:hover {
+  color: #000;
+}
+
+.hidden {
+  display: none;
 }
